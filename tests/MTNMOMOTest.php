@@ -79,5 +79,12 @@ class MTNMOMOTest extends \PHPUnit\Framework\TestCase {
 		print_r($res);
 	}
 	
+	public function test_is_mobile_mtn(){
+		$this->assertEquals(MTNMOMO::is_mobile_mtn('256770111222'), true);
+		$this->assertEquals(MTNMOMO::is_mobile_mtn('256760111222'), true);
+		$this->assertEquals(MTNMOMO::is_mobile_mtn('256780111222'), true);
+		$this->assertEquals(MTNMOMO::is_mobile_mtn('256320111222'), true);
+		$this->assertEquals(MTNMOMO::is_mobile_mtn('256390111222'), true);
+	}
 	
 }

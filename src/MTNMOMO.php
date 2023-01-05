@@ -145,9 +145,14 @@ class MTNMOMO {
 		];
 	}
 	
-	public function is_mobile_mtn($mobile){
-		preg_match('/256(\d{9})$/', $mobile, $matches);
-
+	public static function is_mobile_mtn($mobile){
+		$res = preg_match('/256(\d{9})$/', $mobile, $matches);
+		
+		//no match
+		if($res == 0) return false;
+		
+		$n = $matches[1]
+		return preg_match('/^(76|77|78|32|39)\d+/', $n, $matches2);
 
 	}
 	
