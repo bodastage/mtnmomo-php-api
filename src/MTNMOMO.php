@@ -151,7 +151,7 @@ class MTNMOMO {
 		//no match
 		if($res == 0) return false;
 		
-		$n = $matches[1]
+		$n = $matches[1];
 		return preg_match('/^(76|77|78|32|39)\d+/', $n, $matches2);
 
 	}
